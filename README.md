@@ -9,7 +9,7 @@ sudo docker build -t rtv-2023 .
 sudo docker run -p 80:80 rtv-2023
 ```
 
-4. Access the application in your web browser by navigating to http://localhost.
+- Access the application in your web browser by navigating to http://localhost.
 
 ## Walkthrough
 1. Once the server is running, open your web browser and navigate to http://localhost.
