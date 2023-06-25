@@ -13,8 +13,8 @@ sudo docker run -p 80:80 rtv-2023
 
 ## Walkthrough
 1. Once the server is running, open your web browser and navigate to http://localhost.
-2. You will be presented with the landing page of the Missle Terminal
-3. The menus give error messages that are hints to the login password and loging page.
+2. You will be presented with the landing page of the Missile Terminal
+3. The menus give error messages that are hints to the login password and login page.
 4. Using the hints, you can figure out the correct login password is `pipboy4life`.
 5. Once logged in, you can access the Secure Terminal, which allows bash commands in the data folder.
 6. Type `ls -a security` to see that there is a hidden launch key file.
