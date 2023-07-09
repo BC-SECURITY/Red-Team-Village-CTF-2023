@@ -155,7 +155,7 @@ def render_landing_page(message=''):
                 color: white;
             }}
         </style>
-        <!-- QWggYWggYWgsIHlvdSBkaWRuJ3Qgc2F5IHRoZSBtYWdpYyB3b3Jk -->
+        <!-- SGludDogTG9vayBmb3Igc2VjcmV0IG1lbnUgb3B0aW9ucw== -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {{
                 var input = document.getElementById("command");
