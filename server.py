@@ -39,13 +39,14 @@ MENU = {
 
 hint_messages = [
     "System malfunction. Unexpected error at address 0x7f8b86d3. Pip... Err...",
-    "Terminal failure. Code - 0x4c494645. Memory dump: [76, 97, 117, 108, 116, 101, 99, 104, 32, 115, 101, 99, 117, 114, 105, 116, 121, 32, 101, 110, 104, 97, 110, 99, 101, 109, 101, 110, 32, 112, 114, 111, 99, 101, 100, 117, 114, 101, 32, 105, 110, 105, 116, 105, 97, 116, 101, 100...]",
+    "Terminal failure. Code - 0x4c494645. Memory dump: [86, 97, 117, 108, 116, 101, 99, 104, 32, 115, 101, 99, 117, 114, 105, 116, 121, 32, 101, 110, 104, 97, 110, 99, 101, 109, 101, 110, 116, 32, 112, 114, 111, 99, 101, 100, 117, 114, 101, 32, 105, 110, 105, 116, 105, 97, 116, 101, 100...]",
     "Error 404: 'pipboy' object not found.",
     "Caution! Password protection active. Remember: 'life' is key...",
     "Exception! Address <'vault'> not found in memory.",
     "Terminal needs valid credentials. Run 'Enter' for user authentication.",
     "Terminal failure. Code - 0xD3FC0N31. Memory dump: [73, 110, 105, 116, 105, 97, 116, 105, 110, 103, 32, 115, 101, 99, 117, 114, 105, 116, 121, 32, 112, 114, 111, 116, 111, 99, 111, 108, 46, 46, 46, 32, 82, 101, 109, 101, 109, 98, 101, 114, 44, 32, 39, 112, 105, 112, 39, 32, 105, 115, 32, 116, 104, 101, 32, 98, 111, 121, 32, 102, 111, 114, 32, 39, 108, 105, 102, 101, 39, 46, 46, 46]",
-    "Error 421: '/login' not found"
+    "Error 421: '/login' not found",
+    "password format failure = ******#****"
 ]
 
 
