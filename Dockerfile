@@ -1,11 +1,13 @@
-FROM python:3.11
+FROM python:3.8-slim-buster
 
-WORKDIR /app
+WORKDIR /root
 
-COPY . /app
+COPY . /root
 
 COPY data /app/data
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "./server.py" ]
+EXPOSE 8045
+
+CMD [ "python", "/root/server.py" ]

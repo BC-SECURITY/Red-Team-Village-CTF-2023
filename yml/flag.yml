@@ -1,0 +1,29 @@
+# Required sections
+name: "Secure Terminal"
+author: "BC-Security"
+category: dungeondive
+description: |
+    - Initiating Connection....
+
+    - Please Connect to : secureterm.pwn.site:80
+
+    Challenge Courtesy of <a href="https://github.com/BC-SECURITY" target="_blank">BC-Security!</a>
+value: 20
+type: standard
+
+attempts: 0
+flags:
+    - {
+        type: "static",
+        content: "flag{584d0218c9c70bfebb5416967f5a35a1}",
+        data: "case_insensitive",
+      }
+    - {
+        type: "static",
+        content: "584d0218c9c70bfebb5416967f5a35a1",
+        data: "case_insensitive",
+      }
+tags:
+    - web
+state: hidden
+version: "0.1"

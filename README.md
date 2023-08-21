@@ -1,18 +1,31 @@
-# Red Team Village 2023 CTF - Setup and Walkthrough
+# Secure Terminal
 
-## Setup Instructions
+## Challenge Host: http://secureterm.pwn.site:80/
 
-Build and run the Docker image:
+## Screenshots:
+![](img/sc1.png)
 
-```bash
-sudo docker build -t rtv-2023 .
-sudo docker run -p 80:80 rtv-2023
+## Build and Run
+`sudo ./build.sh`
+
+## Secure Terminal
+### Category: Secure Terminal
+### Value: 20
+### Description
+```
+- Initiating Connection....
+
+- Please Connect to : secureterm.pwn.site:8045
+
+Challenge Courtesy of <a href="https://github.com/BC-SECURITY" target="_blank">BC-Security!</a>
 ```
 
-- Access the application in your web browser by navigating to http://localhost.
 
-## Walkthrough
-1. Once the server is running, open your web browser and navigate to http://localhost.
+### Flag
+`flag{584d0218c9c70bfebb5416967f5a35a1}`
+
+### Solution
+1. Once the server is running, open your web browser and navigate to http://localhost:8045/.
 2. You will be presented with the landing page of the Missile Terminal
 3. The menus give error messages that are hints to the login password and login page.
 4. Using the hints, you can figure out the correct login password is `pipboy4life`.

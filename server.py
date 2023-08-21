@@ -4,10 +4,18 @@ import subprocess
 import random
 import os
 
+# shitfing process to another user
+def demote(user_gid, user_uid):
+    def set_ids():
+        os.setgid(user_gid)
+        os.setuid(user_uid)
+
+    return set_ids
+
 
 # Configure Flask app
 app = Flask(__name__)
-app.secret_key = 'any secret string'
+app.secret_key = '964bf4687ccd537fe549fe9c7d07c5af4da9bd5acb3cbd98b7681553f8a10fcb'
 
 # Configure server-side session
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -60,6 +68,13 @@ def render_menu(menu):
     options.extend(f"{i}: {option}" for i, option in enumerate(menu, start=1) if option != "Missile Controls")
     return '\n'.join(options)
 
+
+@app.route('/robots.txt', methods=['GET'])
+def robots():
+    return '''
+    User-agent: *
+    Disallow: /login
+    '''
 
 @app.route('/', methods=['GET', 'POST'])
 def landing():
@@ -118,9 +133,16 @@ def terminal():
     if request.method == 'POST':
         command = request.form['command']
         try:
-            result = subprocess.check_output(command, shell=True, executable='/bin/bash').decode()
-        except subprocess.CalledProcessError as e:
-            result = str(e)
+            result = subprocess.run(
+                command,
+                shell=True,
+                timeout=0.5,
+                capture_output=True,
+                preexec_fn=demote(33, 33),
+                text=True,
+            ).stdout
+        except Exception:
+            result = "ERROR: Operation failed."
         return render_terminal_page(result=result)
 
     return render_terminal_page()
@@ -289,4 +311,4 @@ def render_terminal_page(result=''):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80,  debug=True)
+    app.run(host='0.0.0.0', port=8045,  debug=True)
