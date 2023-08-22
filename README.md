@@ -8,6 +8,10 @@
 ## Build and Run
 `sudo ./build.sh`
 
+### FAQ
+- What do I do if I receive this error `WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7f92f141ad90>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/flask/`?
+- Run `sudo service docker restart`
+
 ## Secure Terminal
 ### Category: Secure Terminal
 ### Value: 20
